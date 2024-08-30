@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 40px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    background: url('../images/neighborhood.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeInUp 2s ease-in;
+}
+
+.hero .btn:hover {
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+    transform: translateY(-3px);
+}
+
+.sections {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:nth-child(even) .section-text {
+    order: 2;
+}
+
+.section-text,
+.section-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-text h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.section-text h2:hover {
+    color: #0056b3;
+}
+
+.section-text p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.section-image img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.section-image img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.footer-links a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background: #222222;
+    color: #fff;
+    padding: 70px 30px;
+    border-radius: 0px;
+    margin: 40px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-us .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.contact-info ul {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin: 5px 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
